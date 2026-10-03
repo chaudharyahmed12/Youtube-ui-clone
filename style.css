@@ -1,0 +1,2096 @@
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0f0f0f;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+
+    height: 64px;
+
+    width: 100%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 0 18px;
+
+    background: #0f0f0f;
+
+    border-bottom: 1px solid #181818;
+
+}
+
+
+
+/* =====================================================
+   HEADER LEFT
+   ===================================================== */
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-width: 190px;
+
+}
+
+
+.menu-btn {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 22px;
+
+}
+
+
+.menu-btn:hover {
+
+    background: #272727;
+
+}
+
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+.youtube-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 20px;
+
+    white-space: nowrap;
+
+}
+
+
+.youtube-logo small {
+
+    align-self: flex-start;
+
+    margin-top: 1px;
+
+    color: #aaaaaa;
+
+    font-size: 9px;
+
+}
+
+
+.youtube-icon {
+
+    width: 30px;
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ff0000;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+}
+
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.search-area {
+
+    width: min(680px, 55%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.search-box {
+
+    height: 44px;
+
+    flex: 1;
+
+    display: flex;
+
+    position: relative;
+
+}
+
+
+.search-input {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 100px 0 18px;
+
+    border: 1px solid #303030;
+
+    border-radius: 22px 0 0 22px;
+
+    outline: none;
+
+    background: #121212;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+}
+
+
+.search-input:focus {
+
+    border-color: #3ea6ff;
+
+}
+
+
+.search-input::placeholder {
+
+    color: #999999;
+
+}
+
+
+.search-btn {
+
+    width: 64px;
+
+    height: 44px;
+
+    border: 1px solid #303030;
+
+    border-left: 0;
+
+    border-radius: 0 22px 22px 0;
+
+    background: #222222;
+
+    font-size: 17px;
+
+}
+
+
+.search-btn:hover {
+
+    background: #333333;
+
+}
+
+
+.clear-search-btn {
+
+    position: absolute;
+
+    right: 70px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: transparent;
+
+    color: #aaa;
+
+    border-radius: 50%;
+
+}
+
+
+.clear-search-btn:hover {
+
+    background: #333;
+
+}
+
+
+.mic-btn {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #272727;
+
+    font-size: 18px;
+
+}
+
+
+.mic-btn:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+
+/* =====================================================
+   HEADER RIGHT
+   ===================================================== */
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 190px;
+
+    justify-content: flex-end;
+
+}
+
+
+.create-btn {
+
+    padding: 10px 16px;
+
+    border-radius: 22px;
+
+    background: #272727;
+
+    font-size: 14px;
+
+}
+
+
+.create-btn:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+.notification-btn {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 19px;
+
+}
+
+
+.notification-btn:hover {
+
+    background: #272727;
+
+}
+
+
+.profile-btn {
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: #78a6b8;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+}
+
+
+
+/* =====================================================
+   DROPDOWN MENUS
+   ===================================================== */
+
+.notification-container,
+.profile-container {
+
+    position: relative;
+
+}
+
+
+.notification-menu,
+.profile-menu {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 50px;
+
+    width: 320px;
+
+    max-width: 90vw;
+
+    padding: 18px;
+
+    background: #282828;
+
+    border: 1px solid #444;
+
+    border-radius: 12px;
+
+    display: none;
+
+    z-index: 2000;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.6);
+
+}
+
+
+.notification-menu.show,
+.profile-menu.show {
+
+    display: block;
+
+}
+
+
+.notification-menu h3 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.notification-item {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #444;
+
+}
+
+
+.notification-item:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.notification-item p {
+
+    margin: 5px 0;
+
+    color: #ccc;
+
+    font-size: 13px;
+
+}
+
+
+.notification-item small {
+
+    color: #888;
+
+}
+
+
+
+/* =====================================================
+   PROFILE
+   ===================================================== */
+
+.profile-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #444;
+
+}
+
+
+.big-avatar {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #78a6b8;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+.profile-header small {
+
+    display: block;
+
+    color: #aaa;
+
+    margin-top: 3px;
+
+}
+
+
+.profile-option {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+
+    text-align: left;
+
+    border-radius: 6px;
+
+}
+
+
+.profile-option:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 64px;
+
+    left: 0;
+
+    width: 220px;
+
+    height: calc(100vh - 64px);
+
+    padding: 10px;
+
+    overflow-y: auto;
+
+    background: #0f0f0f;
+
+    z-index: 900;
+
+    transition: .25s ease;
+
+}
+
+
+.sidebar::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.sidebar::-webkit-scrollbar-thumb {
+
+    background: #555;
+
+    border-radius: 10px;
+
+}
+
+
+.sidebar-section {
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #303030;
+
+}
+
+
+.sidebar-section h3 {
+
+    padding: 0 10px 8px;
+
+    font-size: 14px;
+
+}
+
+
+.sidebar-item {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    text-align: left;
+
+    font-size: 14px;
+
+}
+
+
+.sidebar-item:hover {
+
+    background: #272727;
+
+}
+
+
+.sidebar-item.active {
+
+    background: #272727;
+
+    font-weight: bold;
+
+}
+
+
+.sidebar-item > span:first-child {
+
+    width: 25px;
+
+    min-width: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+}
+
+
+.channel-small {
+
+    width: 25px !important;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-size: 12px !important;
+
+    font-weight: bold;
+
+}
+
+
+.purple {
+
+    background: #7650a0;
+
+}
+
+
+.orange {
+
+    background: #e68b38;
+
+}
+
+
+.blue {
+
+    background: #397ac6;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+.main-content {
+
+    margin-left: 220px;
+
+    padding: 18px 24px 60px;
+
+    transition: .25s ease;
+
+}
+
+
+
+/* =====================================================
+   CATEGORY BAR
+   ===================================================== */
+
+.category-bar {
+
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    margin-bottom: 22px;
+
+}
+
+
+.category-bar::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.category-chip {
+
+    flex-shrink: 0;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    background: #272727;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+}
+
+
+.category-chip:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+.category-chip.active {
+
+    background: #ffffff;
+
+    color: #000000;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =====================================================
+   PAGE HEADING
+   ===================================================== */
+
+.page-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.page-heading h1 {
+
+    font-size: 20px;
+
+}
+
+
+#videoCount {
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   VIDEO GRID
+   ===================================================== */
+
+.video-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 38px 16px;
+
+}
+
+
+
+/* =====================================================
+   VIDEO CARD
+   ===================================================== */
+
+.video-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    cursor: pointer;
+
+}
+
+
+.thumbnail {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    background: #222;
+
+}
+
+
+.thumbnail img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .25s ease;
+
+}
+
+
+.video-card:hover .thumbnail img {
+
+    transform: scale(1.03);
+
+}
+
+
+.duration {
+
+    position: absolute;
+
+    right: 7px;
+
+    bottom: 7px;
+
+    padding: 3px 5px;
+
+    background: rgba(0,0,0,.85);
+
+    border-radius: 3px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =====================================================
+   VIDEO INFO
+   ===================================================== */
+
+.video-info {
+
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 11px;
+
+}
+
+
+.channel-avatar {
+
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #7650a0;
+
+    font-weight: bold;
+
+}
+
+
+.video-details {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.video-title {
+
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    margin-bottom: 5px;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+}
+
+
+.channel-name {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.video-meta {
+
+    color: #888;
+
+    font-size: 12px;
+
+}
+
+
+.video-menu-btn {
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    background: transparent;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+}
+
+
+.video-menu-btn:hover {
+
+    background: #272727;
+
+}
+
+
+
+/* =====================================================
+   VIDEO MENU
+   ===================================================== */
+
+.video-menu {
+
+    position: absolute;
+
+    top: 58%;
+
+    right: 5px;
+
+    width: 190px;
+
+    padding: 6px;
+
+    background: #282828;
+
+    border-radius: 10px;
+
+    display: none;
+
+    z-index: 100;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+
+}
+
+
+.video-menu.show {
+
+    display: block;
+
+}
+
+
+.video-menu button {
+
+    width: 100%;
+
+    padding: 11px;
+
+    background: transparent;
+
+    text-align: left;
+
+    border-radius: 6px;
+
+}
+
+
+.video-menu button:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.empty-state {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    color: #aaa;
+
+}
+
+
+.empty-state.show {
+
+    display: block;
+
+}
+
+
+.empty-state div {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.empty-state h2 {
+
+    color: #fff;
+
+    margin-bottom: 8px;
+
+}
+
+
+.empty-state button {
+
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    color: #000;
+
+}
+
+
+
+/* =====================================================
+   SHORTS
+   ===================================================== */
+
+.shorts-section {
+
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #303030;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 21px;
+
+}
+
+
+.close-shorts {
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+}
+
+
+.close-shorts:hover {
+
+    background: #272727;
+
+}
+
+
+.shorts-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.short-card {
+
+    cursor: pointer;
+
+}
+
+
+.short-image {
+
+    aspect-ratio: 9 / 14;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #202020,
+            #555
+        );
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.short-card:hover .short-image {
+
+    transform: scale(1.02);
+
+}
+
+
+.short-card h3 {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+.short-card p {
+
+    color: #888;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =====================================================
+   VIDEO MODAL
+   ===================================================== */
+
+.video-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.85);
+
+}
+
+
+.video-modal.show {
+
+    display: flex;
+
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    width: 900px;
+
+    max-width: 100%;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    background: #181818;
+
+    border-radius: 12px;
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 12px;
+
+    z-index: 5;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.7);
+
+}
+
+
+.close-modal:hover {
+
+    background: #333;
+
+}
+
+
+
+/* =====================================================
+   FAKE VIDEO PLAYER
+   ===================================================== */
+
+.modal-video {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #000;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+}
+
+
+.fake-player {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #333,
+            #000 70%
+        );
+
+}
+
+
+#playVideoBtn {
+
+    margin: auto;
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.9);
+
+    color: #000;
+
+    font-size: 25px;
+
+}
+
+
+.player-controls {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    font-size: 12px;
+
+}
+
+
+#videoProgress {
+
+    flex: 1;
+
+}
+
+
+
+/* =====================================================
+   MODAL INFO
+   ===================================================== */
+
+.modal-title {
+
+    margin-top: 18px;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+}
+
+
+.modal-channel {
+
+    margin-top: 7px;
+
+    color: #aaa;
+
+}
+
+
+.modal-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 18px 0;
+
+}
+
+
+.modal-actions button {
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background: #272727;
+
+}
+
+
+.modal-actions button:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+.modal-actions button.active {
+
+    background: #ffffff;
+
+    color: #000000;
+
+}
+
+
+
+/* =====================================================
+   DESCRIPTION
+   ===================================================== */
+
+.description-box {
+
+    padding: 15px;
+
+    background: #272727;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.description-box p {
+
+    margin-top: 7px;
+
+    color: #ccc;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =====================================================
+   COMMENTS
+   ===================================================== */
+
+.comments-section h3 {
+
+    margin-bottom: 12px;
+
+}
+
+
+.comment-input-row {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+}
+
+
+.comment-input {
+
+    flex: 1;
+
+    padding: 10px 0;
+
+    border: none;
+
+    border-bottom: 1px solid #555;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #fff;
+
+}
+
+
+.comment-input:focus {
+
+    border-color: #fff;
+
+}
+
+
+.comment-btn {
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    color: #000;
+
+}
+
+
+.comment {
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #333;
+
+}
+
+
+.comment strong {
+
+    font-size: 14px;
+
+}
+
+
+.comment p {
+
+    margin-top: 5px;
+
+    color: #ccc;
+
+}
+
+
+
+/* =====================================================
+   CREATE MODAL
+   ===================================================== */
+
+.small-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 3500;
+
+    background: rgba(0,0,0,.7);
+
+}
+
+
+.small-modal.show {
+
+    display: flex;
+
+}
+
+
+.small-modal-content {
+
+    position: relative;
+
+    width: 350px;
+
+    max-width: 90%;
+
+    padding: 25px;
+
+    background: #282828;
+
+    border-radius: 12px;
+
+}
+
+
+.small-modal-content h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.close-small-modal {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 12px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+}
+
+
+.close-small-modal:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+.create-option {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 7px;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    text-align: left;
+
+}
+
+
+.create-option:hover {
+
+    background: #3a3a3a;
+
+}
+
+
+
+/* =====================================================
+   SIDEBAR OVERLAY
+   ===================================================== */
+
+.sidebar-overlay {
+
+    display: none;
+
+}
+
+
+
+/* =====================================================
+   LARGE SCREEN
+   ===================================================== */
+
+@media (min-width: 1500px) {
+
+    .video-grid {
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+    }
+
+}
+
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .video-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .shorts-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+
+    .create-btn {
+
+        display: none;
+
+    }
+
+
+    .header-left,
+    .header-right {
+
+        min-width: auto;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE SIDEBAR
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+
+        left: -235px;
+
+        box-shadow:
+            8px 0 25px rgba(0,0,0,.5);
+
+    }
+
+
+    .sidebar.open {
+
+        left: 0;
+
+    }
+
+
+    .sidebar-overlay.show {
+
+        display: block;
+
+        position: fixed;
+
+        inset: 64px 0 0;
+
+        z-index: 850;
+
+        background: rgba(0,0,0,.65);
+
+    }
+
+
+    .main-content {
+
+        margin-left: 0;
+
+    }
+
+
+    .video-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        height: 58px;
+
+        padding: 0 9px;
+
+        gap: 7px;
+
+    }
+
+
+    .sidebar {
+
+        top: 58px;
+
+        height: calc(100vh - 58px);
+
+    }
+
+
+    .sidebar-overlay.show {
+
+        inset: 58px 0 0;
+
+    }
+
+
+    .youtube-logo strong,
+    .youtube-logo small {
+
+        display: none;
+
+    }
+
+
+    .header-left {
+
+        min-width: 40px;
+
+    }
+
+
+    .search-area {
+
+        width: 100%;
+
+        gap: 5px;
+
+    }
+
+
+    .search-input {
+
+        height: 40px;
+
+        padding-left: 13px;
+
+        padding-right: 70px;
+
+        font-size: 13px;
+
+    }
+
+
+    .search-box {
+
+        height: 40px;
+
+    }
+
+
+    .search-btn {
+
+        width: 48px;
+
+        height: 40px;
+
+    }
+
+
+    .mic-btn {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .notification-btn {
+
+        display: none;
+
+    }
+
+
+    .profile-btn {
+
+        width: 32px;
+
+        height: 32px;
+
+    }
+
+
+    .main-content {
+
+        padding: 13px 10px 45px;
+
+    }
+
+
+    .category-bar {
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .video-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 27px;
+
+    }
+
+
+    .shorts-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .modal-content {
+
+        padding: 12px;
+
+        max-height: 95vh;
+
+    }
+
+
+    .modal-title {
+
+        font-size: 17px;
+
+    }
+
+
+    .comment-input-row {
+
+        flex-direction: column;
+
+    }
+
+
+    .comment-btn {
+
+        align-self: flex-end;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   VERY SMALL
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .youtube-logo {
+
+        display: none;
+
+    }
+
+
+    .search-area {
+
+        width: 100%;
+
+    }
+
+
+    .header-right {
+
+        min-width: 35px;
+
+    }
+
+
+    .video-title {
+
+        font-size: 14px;
+
+    }
+
+}

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>YouTube Clone</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+     ===================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="header">
+
+
+    <!-- LEFT -->
+
+    <div class="header-left">
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+
+        <div class="youtube-logo">
+
+            <span class="youtube-icon">
+                ▶
+            </span>
+
+            <strong>YouTube</strong>
+
+            <small>PK</small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                class="search-input"
+                id="searchInput"
+                placeholder="Search"
+                autocomplete="off"
+            >
+
+
+            <button
+                class="clear-search-btn"
+                id="clearSearchBtn"
+                title="Clear"
+            >
+                ✕
+            </button>
+
+
+            <button
+                class="search-btn"
+                id="searchBtn"
+                title="Search"
+            >
+                🔍
+            </button>
+
+        </div>
+
+
+        <!-- Mic only - no voice functionality -->
+
+        <button
+            class="mic-btn"
+            id="micBtn"
+            title="Voice search"
+        >
+            🎙️
+        </button>
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+
+    <div class="header-right">
+
+
+        <!-- CREATE -->
+
+        <button
+            class="create-btn"
+            id="createBtn"
+        >
+            ＋ Create
+        </button>
+
+
+
+        <!-- NOTIFICATIONS -->
+
+        <div class="notification-container">
+
+            <button
+                class="notification-btn"
+                id="notificationBtn"
+            >
+                🔔
+            </button>
+
+
+            <div
+                class="notification-menu"
+                id="notificationMenu"
+            >
+
+                <h3>Notifications</h3>
+
+                <div class="notification-item">
+                    <strong>New video</strong>
+                    <p>Bro Code uploaded a new video.</p>
+                    <small>2 hours ago</small>
+                </div>
+
+                <div class="notification-item">
+                    <strong>Subscription</strong>
+                    <p>New content from JavaScript Hub.</p>
+                    <small>5 hours ago</small>
+                </div>
+
+                <div class="notification-item">
+                    <strong>Recommendation</strong>
+                    <p>A video you may like is available.</p>
+                    <small>1 day ago</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFILE -->
+
+        <div class="profile-container">
+
+            <button
+                class="profile-btn"
+                id="profileBtn"
+            >
+                A
+            </button>
+
+
+            <div
+                class="profile-menu"
+                id="profileMenu"
+            >
+
+                <div class="profile-header">
+
+                    <div class="big-avatar">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Ahmed</strong>
+                        <small>@ahmed</small>
+                    </div>
+
+                </div>
+
+
+                <button class="profile-option">
+                    👤 Your channel
+                </button>
+
+                <button class="profile-option">
+                    🔄 Switch account
+                </button>
+
+                <button class="profile-option">
+                    ⚙️ Settings
+                </button>
+
+                <button class="profile-option">
+                    🚪 Sign out
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+     ===================================================== -->
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+
+    <!-- MAIN -->
+
+    <div class="sidebar-group">
+
+
+        <button
+            class="sidebar-item active"
+            data-page="home"
+        >
+            <span>🏠</span>
+            <span>Home</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="shorts"
+        >
+            <span>◉</span>
+            <span>Shorts</span>
+        </button>
+
+
+    </div>
+
+
+
+    <!-- SUBSCRIPTIONS -->
+
+    <div class="sidebar-section">
+
+        <h3>Subscriptions</h3>
+
+
+        <button
+            class="sidebar-item"
+            data-page="subscription"
+        >
+
+            <span class="channel-small purple">
+                B
+            </span>
+
+            <span>Bro Code</span>
+
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="subscription"
+        >
+
+            <span class="channel-small orange">
+                C
+            </span>
+
+            <span>Chrome Nerd</span>
+
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="subscription"
+        >
+
+            <span class="channel-small blue">
+                J
+            </span>
+
+            <span>JavaScript Hub</span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- YOU -->
+
+    <div class="sidebar-section">
+
+        <h3>You</h3>
+
+
+        <button
+            class="sidebar-item"
+            data-page="history"
+        >
+            <span>◷</span>
+            <span>History</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="playlists"
+        >
+            <span>☷</span>
+            <span>Playlists</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="watchlater"
+        >
+            <span>◷</span>
+            <span>Watch later</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="liked"
+        >
+            <span>👍</span>
+            <span>Liked videos</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="yourvideos"
+        >
+            <span>▣</span>
+            <span>Your videos</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="downloads"
+        >
+            <span>↓</span>
+            <span>Downloads</span>
+        </button>
+
+    </div>
+
+
+
+    <!-- EXPLORE -->
+
+    <div class="sidebar-section">
+
+        <h3>Explore</h3>
+
+
+        <button
+            class="sidebar-item"
+            data-page="music"
+        >
+            <span>🎵</span>
+            <span>Music</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="gaming"
+        >
+            <span>🎮</span>
+            <span>Gaming</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="news"
+        >
+            <span>📰</span>
+            <span>News</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="sports"
+        >
+            <span>⚽</span>
+            <span>Sports</span>
+        </button>
+
+    </div>
+
+
+
+    <!-- MORE -->
+
+    <div class="sidebar-section">
+
+        <h3>More from YouTube</h3>
+
+
+        <button class="sidebar-item">
+            <span>🔴</span>
+            <span>YouTube Premium</span>
+        </button>
+
+
+        <button class="sidebar-item">
+            <span>🎵</span>
+            <span>YouTube Music</span>
+        </button>
+
+
+        <button class="sidebar-item">
+            <span>👦</span>
+            <span>YouTube Kids</span>
+        </button>
+
+    </div>
+
+
+
+    <!-- SETTINGS -->
+
+    <div class="sidebar-section">
+
+        <button
+            class="sidebar-item"
+            data-page="settings"
+        >
+            <span>⚙️</span>
+            <span>Settings</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            data-page="report"
+        >
+            <span>🚩</span>
+            <span>Report history</span>
+        </button>
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- CATEGORY BAR -->
+
+    <div
+        class="category-bar"
+        id="categoryBar"
+    >
+
+        <button
+            class="category-chip active"
+            data-category="All"
+        >
+            All
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Music"
+        >
+            Music
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Mixes"
+        >
+            Mixes
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="JavaScript"
+        >
+            JavaScript
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="News"
+        >
+            News
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Programming"
+        >
+            Programming
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Data Science"
+        >
+            Data Science
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Gaming"
+        >
+            Gaming
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Comedy"
+        >
+            Comedy
+        </button>
+
+    </div>
+
+
+
+    <!-- PAGE TITLE -->
+
+    <div
+        class="page-heading"
+        id="pageHeading"
+    >
+
+        <h1>Home</h1>
+
+        <span id="videoCount"></span>
+
+    </div>
+
+
+
+    <!-- VIDEO GRID -->
+
+    <section
+        class="video-grid"
+        id="videoGrid"
+    >
+
+        <!-- JavaScript videos will appear here -->
+
+    </section>
+
+
+
+    <!-- EMPTY STATE -->
+
+    <section
+        class="empty-state"
+        id="emptyState"
+    >
+
+        <div>🔎</div>
+
+        <h2>No videos found</h2>
+
+        <p>
+            Try a different search or category.
+        </p>
+
+        <button id="backHomeBtn">
+            Back to Home
+        </button>
+
+    </section>
+
+
+
+    <!-- SHORTS -->
+
+    <section
+        class="shorts-section"
+        id="shortsSection"
+    >
+
+        <div class="section-heading">
+
+            <h2>◉ Shorts</h2>
+
+            <button
+                class="close-shorts"
+                id="closeShorts"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="shorts-grid">
+
+
+            <article class="short-card">
+
+                <div class="short-image">
+                    💻
+                </div>
+
+                <h3>
+                    3 JavaScript tricks you should know
+                </h3>
+
+                <p>1.2M views</p>
+
+            </article>
+
+
+            <article class="short-card">
+
+                <div class="short-image">
+                    🤖
+                </div>
+
+                <h3>
+                    AI is changing software development
+                </h3>
+
+                <p>850K views</p>
+
+            </article>
+
+
+            <article class="short-card">
+
+                <div class="short-image">
+                    🐍
+                </div>
+
+                <h3>
+                    Python in 30 seconds
+                </h3>
+
+                <p>2.4M views</p>
+
+            </article>
+
+
+            <article class="short-card">
+
+                <div class="short-image">
+                    ⚛️
+                </div>
+
+                <h3>
+                    React component explained
+                </h3>
+
+                <p>920K views</p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     VIDEO MODAL
+     ===================================================== -->
+
+<div
+    class="video-modal"
+    id="videoModal"
+>
+
+
+    <div class="modal-content">
+
+
+        <button
+            class="close-modal"
+            id="closeModal"
+        >
+            ✕
+        </button>
+
+
+        <!-- VIDEO -->
+
+        <div
+            class="modal-video"
+            id="modalVideo"
+        >
+
+            <div class="fake-player">
+
+                <button id="playVideoBtn">
+                    ▶
+                </button>
+
+                <div class="player-controls">
+
+                    <span>0:00</span>
+
+                    <input
+                        type="range"
+                        value="0"
+                        min="0"
+                        max="100"
+                        id="videoProgress"
+                    >
+
+                    <span>10:32</span>
+
+                    <button id="fullscreenBtn">
+                        ⛶
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <h2
+            class="modal-title"
+            id="modalTitle"
+        ></h2>
+
+
+        <p
+            class="modal-channel"
+            id="modalChannel"
+        ></p>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="modal-actions">
+
+
+            <button id="likeBtn">
+                👍 <span>Like</span>
+            </button>
+
+
+            <button id="dislikeBtn">
+                👎 <span>Dislike</span>
+            </button>
+
+
+            <button id="saveBtn">
+                💾 <span>Save</span>
+            </button>
+
+
+            <button id="shareBtn">
+                🔗 Share
+            </button>
+
+
+            <button id="subscribeBtn">
+                🔔 Subscribe
+            </button>
+
+        </div>
+
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="description-box">
+
+            <strong>About this video</strong>
+
+            <p id="modalDescription">
+                This is a YouTube clone video preview.
+                You can interact with the buttons below.
+            </p>
+
+        </div>
+
+
+
+        <!-- COMMENTS -->
+
+        <div class="comments-section">
+
+            <h3>
+                Comments
+            </h3>
+
+
+            <div class="comment-input-row">
+
+                <input
+                    type="text"
+                    class="comment-input"
+                    id="commentInput"
+                    placeholder="Add a comment..."
+                >
+
+
+                <button
+                    class="comment-btn"
+                    id="commentBtn"
+                >
+                    Comment
+                </button>
+
+            </div>
+
+
+            <div
+                class="comments-list"
+                id="commentsList"
+            >
+
+                <div class="comment">
+
+                    <strong>Ahmed</strong>
+
+                    <p>
+                        This project looks great!
+                    </p>
+
+                </div>
+
+
+                <div class="comment">
+
+                    <strong>JavaScript Learner</strong>
+
+                    <p>
+                        The UI is really clean.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CREATE MODAL
+     ===================================================== -->
+
+<div
+    class="small-modal"
+    id="createModal"
+>
+
+    <div class="small-modal-content">
+
+        <button
+            class="close-small-modal"
+            id="closeCreateModal"
+        >
+            ✕
+        </button>
+
+
+        <h2>Create</h2>
+
+
+        <button class="create-option">
+            ⬆️ Upload video
+        </button>
+
+
+        <button class="create-option">
+            📡 Go live
+        </button>
+
+
+        <button class="create-option">
+            📝 Create post
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="youtube.js"></script>
+
+</body>
+</html>
